@@ -1,0 +1,24 @@
+# .gitignore
+
+# python cache
+__pycache__/*
+__pycache__/
+*.pyc
+
+# vscode configs
+.vscode
+
+# run dir
+/runs/*
+!/runs/.gitkeep
+
+# datasets dir
+/datasets/*
+!/datasets/.gitkeep
+
+# ultralytics
+/ultralytics/*
+!/ultralytics/.gitkeep
+
+# yolo params
+/yolo11*.pt
