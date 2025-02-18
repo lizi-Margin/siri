@@ -5,9 +5,15 @@ from siri.global_config import GloablStatus
 from siri.utils.logger import lprint
 
 
-def move_mouse(*args):
-    # print(f"move_mouse called with args: {args}")
-    pass
+def move_mouse(move_x, move_y):
+    import uinput
+    events = (
+        uinput.REL_X,
+        uinput.REL_Y,
+    )
+    with uinput.Device(events) as device:
+        device.emit(uinput.REL_X, move_x)
+        device.emit(uinput.REL_Y, move_y)
 
 
 class Operator(threading.Thread):
